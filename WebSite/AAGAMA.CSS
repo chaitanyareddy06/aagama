@@ -963,3 +963,13 @@ scroll-margin-top: 100px;
 #Home{
 scroll-margin-top: 100px;
 }
+.image-contain{
+    position: relative;
+    display: inline-block;
+  }
+
+  /* CSS for the image */
+  .image-contain img {
+    display: block;
+    max-width: 100%;
+  }
