@@ -1,0 +1,505 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAGAMA-2K24</title>
+    <link rel="stylesheet" href="AAGAMAYELLOW.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khojki&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Varela Round', sans-serif;
+            }
+
+            header {
+                background-color: #000000;
+                padding: 0px;
+                text-align: center;
+                position: fixed;
+                width: 100%;
+                z-index: 1000;
+                display: flex;
+                margin-top: 0%;
+                margin-block: 0px;
+                justify-content: space-between;
+                align-items: center; /* Center vertically within the header */
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+            }
+
+                nav ul li {
+                    display: inline-block;
+                }
+
+            nav a {
+                text-decoration: none;
+                color: white;
+                padding: 10px;
+                display: block;
+            }
+
+            .menu-toggle {
+                cursor: pointer;
+                font-size: 1.5em;
+                color: white;
+            }
+
+            @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px; /* Adjust as needed */
+                right: 0;
+                width: 100%;
+                background-color: #000000;
+                margin: 0px;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                font-size: 1.5em;
+                color: white;
+                z-index: 1100; 
+            }
+        }
+</style>
+
+</head>
+<body>
+    <!--<canvas id="test"></canvas>-->
+    
+    <header>
+        <!--<nav>
+            <ul>
+                <li><a href="#" onclick="scrollToSection('Home')">Home</a></li>
+                <li><a href="#" onclick="openGoogleForm1('Catalogue')">Catalogue</a></li>
+                <li><a href="#" onclick="scrollToSection('Events')">Events</a></li>
+                <li><a href="#" onclick="openGoogleForm('Registration')">Registration</a></li>
+                <li><a href="#" onclick="scrollToSection('Social-Media')">Social Media</a></li>
+                <li><a href="#" onclick="scrollToSection('Contact-Us')">Contact-Us</a></li>
+                <li><a href="#" onclick="scrollToSection('Venue')">Venue</a></li>
+            </ul>
+        </nav>-->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <div class="button" data-text="Awesome" a>
+                    <span class="actual-text">&nbsp;MICT&nbsp;</span>
+                    <span aria-hidden="true" class="front-text">&nbsp;MICT&nbsp;</span>
+                </div>
+            </li>
+            <li>
+            <li>
+                <button class="ui-btn" onclick="scrollToSection('Home')">
+                    <span>
+                        Home
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button class="ui-btn" onclick="openGoogleForm1()">
+                    <span>
+                        Catalogue
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button class="ui-btn" onclick="scrollToSection('Events')">
+                    <span>
+                        Events
+                    </span>
+                </button>
+            </li>
+            <li>
+                <!--<button class="ui-btn" onclick="scrollToSection('Registration')">-->
+                <!--<button class="ui-btn" onclick="https://drive.google.com/file/d/1y7nxRNg2lFaRPbVbb37xd46aSXjrxQaw/view?usp=drivesdk">-->
+                <button class="ui-btn" onclick="openGoogleForm()">
+                    <span>
+                        Registration
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button class="ui-btn" onclick="scrollToSection('Social-Media')">
+                    <span>
+                        Social-Media
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button class="ui-btn" onclick="scrollToSection('Contact-Us')">
+                    <span>
+                        Contact-Us
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button class="ui-btn" onclick="scrollToSection('Venue')">
+                    <span>
+                        Venue
+                    </span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <!--HOME-->
+    <section id="Home">
+        <!--<div class="image-cont">
+            <div class="buttonon" data-text="Awesome">
+                <span class="actual-text">&nbsp;AAGAMA-2K24&nbsp;</span>
+                <span aria-hidden="true" class="front-text">&nbsp;AAGAMA-2K24&nbsp;</span>
+            </div>
+        </div>
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihawZTCPe7uipVUeAlbul8RlEPTlKRFnEWBMaTfADRlOvQU6-scjAyUhOFGCENFRb6PtKBUwM6y71x_FsUWt0lir-6-ayg=s1600" alt="Description of the image" style="width: 100%; height: auto;">
+        </div>-->
+        <div class="clgimage">
+            <!-- Add an image -->
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihY-LX8FB0daMuSvjlm9fkxhjxwWQTsbBoFMOSIpb81_NCoADwK9qoyQST2Who_UXLuIhEJKguyXoK8nU6guwcyKwVlS9w=s1600" alt="Description of the image">
+    
+            <!-- Text overlay -->
+            <div class="text-overlay">AAGAMA 2K24</div>
+        </div>
+    </section>
+    <section id="Events">
+        <strong><h1></h1></strong>
+        <div class="container">
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>CODE ZILLA</h2>
+                    <a href="https://drive.google.com/file/d/1zIZVCCO7C4P4ZYAb84hmm7ScE6TFhA15/view?usp=drivesdk" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>WEB WIZARDS</h2>
+                    <a href="https://drive.google.com/file/d/1xmmbcmNtCtmo-LMFg7bnhSb8cTxUHLJT/view?usp=drivesdk" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>PROMPTED PIXELS</h2>
+                    <a href="https://drive.google.com/file/d/1xjZGjpWXlpZOMEbNxDwESw32ghZIXhhO/view?usp=drivesdk" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>MR&MS DESIGNER</h2>
+                    <a href="https://drive.google.com/file/d/1xdM8bX1jmzt2wsbfrP3djRuVNGuuKbCJ/view?usp=drivesdk" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>VIKSHIT WITH INNOVATION</h2>
+                    <a href="https://drive.google.com/file/d/1xjfKfCjtMficFMXc3-VtL7jlC6lgBzkg/view?usp=drivesdk" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>CIRCUIT CIRCUS</h2>
+                    <a href="https://drive.google.com/file/d/1xRvxlnjIWa18fgXDoJszZ2gtKITi9sV3/view?usp=drivesdk" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>INTERPRETIO </h2>
+                    <a href="https://drive.google.com/file/d/1zJhmK7kRR7JRYLlGJ33w7N3jNeR06njv/view?usp=drivesdk" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>TECHIE TALKY</h2>
+                    <a href="https://drive.google.com/file/d/1xhsB-TpQVErCWdWbxkKpFpybxV20wA04/view?usp=drivesdk" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <span></span>
+                <div class="content">
+                    <h2>QUIZ</h2>
+                    <a href="https://drive.google.com/file/d/1-tw6MXQwwDBSG35WxOlr57F5a0amaZFj/view?usp=drivesdk" target="_blank">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Registration">
+        <button class="ui-btn1" onclick="openGoogleForm()"></button>
+    </section>
+
+    <!---- <input type="checkbox" id="signup_toggle">
+                        <form class="form">
+                            <div class="form_front">
+                                <div class="form_details">You'll Recieve an email with google from us</div>
+                                <input placeholder="Enter your Email" class="input" type="text">
+                                <button class="btn">Send</button>
+                            </div>
+                        </form>
+                    </div>
+            </section>-->
+    <!--SOCIAL-MEDIA-->
+    <section id="Social-Media">
+        <canvas id="test"></canvas>
+
+        <div class="par">
+            <div class="ki">
+                <a href="https://x.com/DVR_DrHS_MIC?t=mdrpP9M6RZNMlorseuZgDg&s=09" target="_blank" class="buttonbtn-1">
+                    <button class="buttonbtn-1">
+                        <svg fill="#1e90ff"
+                             viewBox="0 0 512 512"
+                             height="3em"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                        </svg>
+                    </button>
+                </a>
+
+            </div>
+            <div class="ki">
+                <a href="https://www.instagram.com/miccollegeoftechnology/" target="_blank" class="buttonbtn-2">
+                    <button class="buttonbtn-2">
+                        <svg fill="#ff00ff"
+                             viewBox="0 0 448 512"
+                             height="3em"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                        </svg>
+                    </button>
+                </a>
+                
+            </div>
+            <div class="ki">
+                <a href="https://www.facebook.com/people/DVR-Dr-HS-MIC-College-of-Technology-Autonomous/100067108660296/" target="_blank" class="buttonbtn-3">
+                    <button class="buttonbtn-3">
+                        <svg fill="#4267B2"
+                             viewBox="0 0 320 512"
+                             height="3em"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                            </path>
+                        </svg>
+                    </button>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+    <section id="Contact-Us">
+        <div class="row">
+            <div class="college">
+                <strong> <u><h2>Contact Us</h2></u></strong>
+                <h1>DVR & Dr.HS MIC COLLEGE OF TECHNOLOGY</h1><br>
+                <u><strong>Address for Correspondance:</strong></u><br>
+                <div class="text-center">
+                    <br>
+                    <u><strong>Coordinators</strong><br></u>
+                    Dr.P.Pradeep HOD, <br>Department of EEE<br>
+                    Mrs A. Anuradha HoD, <br>Department of IT<br>
+                    <br>
+                    <u><strong>Faculty-Coordinators</strong></u><BR>
+                    Mr .A.V.V.Sairam(CIVIL)<br>
+                    Mr .S.Ravikanth(EEE)<br>
+                    Mr .R.Ranjith kumar (ME)<br>
+                    Ms .G.Ananth lakshmi (ECE)<br>
+                    Ms .V.Lakshmi Chetana(CSE)<br>
+                    Mr .A.Kalyan kumar (AI)<br>
+                    Ms .R.Vijaya(IT,MCA)<br>
+                    Mr .V.Bujji babu(BED)<br>
+
+
+                    <a href="aagama@mictech.ac.in"></a>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="Venue">
+        <div class="row">
+            <div class="det">
+                <strong>DVR & Dr.HS MIC College of Technology(Autonomous)</strong><br>
+                Approved by AICTE<br>
+                Permanently affiliated to J.N.T.U.K., Kakinada<br>
+                Accredited with NAAC 'A' Grade<br>
+                NBA Accredited B.Tech (CSE, ECE, ME) | An ISO 9001:2015 Certified Institute<br>
+                NH 9, Vijayawada - Hyderabad Hwy, Kanchikacherla, Andhra Pradesh 521180,India<br>
+                Phone number-7382616824<br>
+            </div>
+        </div>
+
+        <p>
+            <a href="office@mictech.ac.in"></a>
+        </p>
+    </section>
+    <footer>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3821.713604750772!2d80.3607401!3d16.691209!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35bdfe4c02e0c1%3A0xf59820066fefa912!2sMIC%20College%20of%20Technology!5e0!3m2!1sen!2sin!4v1708934589985!5m2!1sen!2sin" width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+
+    <footer>
+        <div class="containertext-center">
+            <p>Copyright &copy; MICT AAGAMA 2024</p>
+        </div>
+    </footer>
+</body>
+<!--JAVA SCRIPT-->
+<!-- Your existing HTML and CSS code -->
+<script>
+    function toggleMenu() {
+        const nav = document.querySelector('nav ul');
+        nav.classList.toggle('show');
+    }
+
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        const nav = document.querySelector('nav ul');
+
+        if (window.innerWidth <= 768) {
+            nav.classList.remove('show');
+        }
+
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+    switch (sectionId) {
+            case 'Home':
+                textOverlay.textContent = 'AAGAMA 2K24';
+                break;
+    }
+
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      const nav = document.querySelector('nav ul');
+
+      if (window.innerWidth <= 768) {
+        nav.classList.remove('show');
+      }
+
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function openGoogleForm() {
+      // Replace 'YOUR_GOOGLE_FORM_LINK' with the actual URL of your Google Form
+      var googleFormLink = 'https://forms.gle/boV7qK6sjaJTUci87';
+      window.open(googleFormLink, '_blank'); // Open in a new tab
+    }
+    function openGoogleForm1() {
+      // Replace 'YOUR_GOOGLE_FORM_LINK' with the actual URL of your Google Form
+      var googleFormLink = 'https://drive.google.com/file/d/1zWmrm9RwDXxdZMtPC9S-fKqpFCovE2CY/view?usp=drivesdk';
+      window.open(googleFormLink, '_blank'); // Open in a new tab
+    }
+    document.addEventListener('click', function (event) {
+        const target = event.target;
+        const isNavLink = target.tagName === 'A' && target.closest('nav ul');
+        if (isNavLink) {
+            event.preventDefault();
+            const sectionId = target.getAttribute('href').slice(1);
+            scrollToSection(sectionId);
+        }
+    });
+</script>
+<script>
+    function scrollToHome() {
+        const homeSection = document.getElementById('Home');
+        if (homeSection) {
+            homeSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+    if (performance.navigation.type === 1) {
+        scrollToHome();
+    }
+    document.addEventListener('click', function (event) {
+        const target = event.target;
+        const isNavLink = target.tagName === 'A' && target.closest('nav ul');
+        if (isNavLink) {
+            event.preventDefault();
+            const sectionId = target.getAttribute('href').slice(1);
+            scrollToSection(sectionId);
+        }
+    });
+</script>
+
+<!--<script>
+  var canvas = document.createElement('canvas');
+  document.body.appendChild(canvas);
+  var ctx = canvas.getContext('2d');
+  var width = canvas.width = window.innerWidth;
+  var height = canvas.height = window.innerHeight;
+  var particles = [];
+  for (var i = 0; i < 50; i++) {
+      particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: Math.random() * 6 - 3,
+          vy: Math.random() * 6 - 3,
+          radius: Math.random() * 10 + 2,
+          color: 'rgb(' + (Math.random() * 255 | 0) + ', ' + (Math.random() * 255 | 0) + ', ' + (Math.random() * 255 | 0) + ')'
+      });
+  }
+  function draw() {
+      ctx.clearRect(0, 0, width, height);
+      for (var i = 0; i < particles.length; i++) {
+          var p = particles[i];
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2, false);
+          ctx.fillStyle = p.color;
+          ctx.fill();
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0 || p.x > width) {
+              p.vx *= -1;
+          }
+          if (p.y < 0 || p.y > height) {
+              p.vy *= -1;
+          }
+      }
+      requestAnimationFrame(draw);
+  }
+  draw();
+</script>-->
+<script>
+  // JavaScript function to toggle the visibility of the text
+  function toggleImageText() {
+    var imageText = document.getElementById("imageText");
+    if (imageText.style.display === "none") {
+      imageText.style.display = "block";
+    } else {
+      imageText.style.display = "none";
+    }
+  }
+</script>
+</html>
